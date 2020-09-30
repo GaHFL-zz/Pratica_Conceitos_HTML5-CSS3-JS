@@ -1,0 +1,223 @@
+/* Corpo da página */
+#corpo-curriculo {
+    background-color: rgb(247, 247, 199);
+    margin-left: 15rem;
+    margin-right: 15rem;
+}
+
+/* Nome Inicial do cabeçalho */
+.cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font: 700 3rem;
+    border-bottom: 1px solid #000000;
+}
+
+/* Imagem do cabeçalho */
+.imagem img{
+    width:200px;
+    height: 200px;
+    border-radius: 0.8rem;
+}
+
+/* informações do cabeçalho, organização */
+.informacoes {
+    display:block;
+    width: 577px;
+    height: 200px;
+}
+
+/* Botões enquadramento */
+.botoes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilização e enquadramento do texto dos botões */
+.botoes a {
+    width: 10rem;
+    height: 2.5rem;
+
+    border-radius: 0.3rem;
+    margin-right: 1rem;
+
+    font: 700 2.4rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+    transition: background 0.3s;
+
+    color: rgb(0, 0, 0);
+}
+
+/* Estilo dos botões 
+    e uma troca de background quando o cursor passar por cima*/
+.botoes a.Facebook {
+    background: #3b5998;
+}
+.botoes a.Facebook:hover {
+    background:#578db6 ;
+}
+
+
+.botoes a.LinkedIn {
+    background: #0e76a8;
+}
+.botoes a.LinkedIn:hover {
+    background:#1795cf;
+}
+
+
+.botoes a.GitHub {
+    background: slategray;
+}
+.botoes a.GitHub:hover {
+    background: rgb(139, 159, 179);
+}
+
+
+/* Estilo da imamgem dos botões */
+.botoes a img {
+    width: 2rem;
+    margin-right: 2rem;
+    border-radius:0.5rem ;
+}
+
+/* Centralizando frase objetivo */
+.objetivo {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+/* Bordar abaixo dos itens */
+.formacao h3,
+.experiencia h3,
+.cursos-extras h3,
+.cursos-transversais h3,
+.informacoes-complementares h3,
+.habilidade h3{
+    border-bottom: 1px solid #000000;
+    font-size: 23px;
+}
+
+/* Centralizando o rordapé */
+.rodape b {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:80px;
+    height: 50px;
+}
+
+@media (min-width: 1200px) {
+    #corpo-curriculo {
+        max-width: 1200px;
+        display: grid;
+        grid-template-columns: 2fr 2fr 2fr;
+        grid-template-rows: 10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh;
+        grid-template-areas: "C C C"
+        "MG I I"
+        "MG B B"
+        "o o o"
+        "F F F"
+        "E E E"
+        "CE CE CE"
+        "CT CT CT"
+        "IC IC IC"
+        "H H H"
+        "FR FR FR";
+        column-gap: 10px;
+        row-gap: 10px;  
+    } 
+
+    .cabecalho {
+        grid-area: C;
+        height: 50px;
+    }
+
+    .imagem img {
+        grid-area: MG;
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        height: 200px;
+    }
+
+    .informacoes {
+        grid-area: I;
+        justify-self: right;
+        justify-self: right;
+        align-items: center;
+        height: 200px;
+    }
+    .botoes {
+        grid-area: B;
+        display: flex;
+        justify-self: left;
+        justify-content: center;
+        align-items: center;
+        margin-top:84px;
+        height: 50px;
+        
+    }
+    .objetivo {
+        grid-area: o;
+        justify-content: center;
+        align-items: center;
+        margin-top:90px;
+        height: 50px;
+    }
+
+    .formacao {
+        grid-area: F;
+        height: 210px;
+        margin-top: 70px;
+    }
+
+    .experiencia {
+        grid-area: E;
+        height: 200px;
+        margin-top: 110px;
+        
+    }
+    .cursos-extras {
+        grid-area: CE;
+        height: 400px;
+        margin-top: 130px;
+        
+    }
+    .cursos-transversais {
+        grid-area: CT;
+        height: 400px;
+        margin-top: 190px;
+       
+    }
+    .informacoes-complementares {
+        grid-area: IC;
+        height: 200px;
+        margin-top: 250px;
+    }
+
+    .habilidade {
+        grid-area: H;
+        height: 200px;
+        margin-top: 270px;
+    }
+
+    .rodape b {
+        grid-area: FR;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top:260px;
+        height: 50px;
+    }
+}
